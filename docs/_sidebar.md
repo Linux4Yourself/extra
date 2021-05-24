@@ -35,7 +35,9 @@
 - **X window system**
   - **Xorg**
       - [Введение](x/xorg/intro)
-      - [Система сборки Xorg](x/xorg/xorg_build_system.md)
+      - [Система сборки Xorg](x/xorg/xorg_build_system)
+      - [util-macros](x/xorg/util-macros)
+      - [libXau](x/xorg/libxau)
   - **Графические библиотеки**
   - **Темы иконок**
   - **Дисплейные менеджеры**
