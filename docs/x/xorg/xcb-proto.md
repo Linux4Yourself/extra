@@ -21,16 +21,19 @@
 * libxml2-2.9.10 (необходимо для запуска тестов пакета)
 
 ## Настройка
+
 ```bash
 PYTHON=python3 ./configure $XORG_CONFIG
 ```
 
 ## Тестирование
+
 ```bash
 make check
 ```
 
 ## Установка
+
 ```bash
 make install
 ```

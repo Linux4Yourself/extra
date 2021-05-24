@@ -21,21 +21,25 @@
 * [xorgproto](xorgproto.md)
 
 ## Настройка
+
 ```bash
 ./configure $XORG_PREFIX
 ```
 
 ## Компиляция
+
 ```bash
 make
 ```
 
 ### Тестирование
+
 ```bash
 make check
 ```
 
 ## Установка
+
 ```bash
 make install
 ```

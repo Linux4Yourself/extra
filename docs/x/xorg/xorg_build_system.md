@@ -58,6 +58,7 @@ EOF
 
 ***
 !> Если же вы выбрали альтернативный префикс, то **обязательно** добавьте `$XORG_PREFIX/bin` в переменную $PATH, `$XORG_PREFIX/lib/pkgconfig` и `$XORG_PREFIX/share/pkgconfig` в переменную `$PKG_CONFIG_PATH`. Не лишним будет и указание дополнительных путей поиска для gcc и aclocal. Выполните следующие команды от имени `root`:
+
 ```bash
 cat >> /etc/profile.d/xorg.sh << "EOF"
 
@@ -77,11 +78,12 @@ EOF
 
 !> ВНИМАНИЕ! Перед тем, как выполнять следующую команду, убедитесь в том, что вы правильно настроили собранную систему!
 
-```
+```bash
 source /etc/profile.d/xorg.sh
 ```
 
 После того, как вы выполните предыдущие команды, добавьте `$XORG_PREFIX/lib` в файл `/etc/ld.so.conf`. Опять же от имени `root`:
+
 ```bash
 echo "$XORG_PREFIX/lib" >> /etc/ld.so.conf
 ```
@@ -93,6 +95,7 @@ echo "$XORG_PREFIX/lib32" >> /etc/ld.so.conf
 ```
 
 И перенастройте `/etc/man_db.conf`:
+
 ```bash
 sed "s@/usr/X11R6@$XORG_PREFIX@g" -i /etc/man_db.conf
 ```
