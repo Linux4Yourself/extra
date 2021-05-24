@@ -18,11 +18,11 @@
 
 ## Зависимости
 ### Необходимые
-* [libXau](libxau.md)
-* [xcb-proto](xcb-proto.md)
+* [libXau](x/xorg/libxau.md)
+* [xcb-proto](x/xorg/xcb-proto.md)
 
 ### Рекомендуемые
-* [libXdmcp](libxdmcp.md)
+* [libXdmcp](x/xorg/libxdmcp.md)
 
 ## Настройка
 
