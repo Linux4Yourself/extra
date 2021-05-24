@@ -18,7 +18,7 @@
 
 ## Зависимости
 ### Необходимые
-* [xorgproto](xorgproto.md)
+* [xorgproto](x/xorg/xorgproto.md)
 
 ## Настройка
 
