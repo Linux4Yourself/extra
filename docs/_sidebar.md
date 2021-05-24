@@ -37,7 +37,10 @@
       - [Введение](x/xorg/intro)
       - [Система сборки Xorg](x/xorg/xorg_build_system)
       - [util-macros](x/xorg/util-macros)
+      - [xorgproto](x/xorg/xorgproto)
       - [libXau](x/xorg/libxau)
+      - [libXdmcp](x/xorg/libxdmcp)
+      - [xcb-proto](x/xorg/xcb-proto)
   - **Графические библиотеки**
   - **Темы иконок**
   - **Дисплейные менеджеры**
