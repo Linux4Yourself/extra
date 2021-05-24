@@ -40,6 +40,38 @@ make check
 make install
 ```
 
+## Для multilib
+
+### Очистка
+
+```bash
+make distclean
+```
+
+### Настройка
+
+```bash
+CC="gcc -m32" CXX="g++ -m32" ./configure \
+    --prefix=$XORG_PREFIX         \
+    --disable-static      \
+    --libdir=$XORG_PREFIX/lib32   \
+    --host=i686-pc-linux-gnu
+```
+
+### Сборка 
+
+```bash
+make
+```
+
+### Установка
+
+```bash
+make DESTDIR=$PWD/DESTDIR install
+cp -Rv DESTDIR/$XORG_PREFIX/lib32/* $XORG_PREFIX/lib32
+rm -rf DESTDIR
+```
+
 ## Установленные файлы
 * **Установленные программы:** нет
 * **Установленные библиотеки:** libXau.so
