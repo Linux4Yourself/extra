@@ -93,7 +93,7 @@ export -f as_root
 bash -e
 ```
 
-## Компиляция и установка
+## Сборка и установка
 
 ```bash
 for package in $(grep -v '^#' ../lib-7.md5 | awk '{print $2}')
@@ -125,16 +125,18 @@ do
   as_root make install
   popd
   rm -rf $packagedir
-  as_root /sbin/ldconfig
+  as_root ldconfig
 done
 ```
 
 И выйдите из подоболочки:
+
 ```bash
 exit
 ```
 
 ## Настройка установленного пакета
+
 Если Вы ставите Xorg в альтернативное местонахождение, создайте несколько символических ссылок.
 
 !> В случае, если вы устанавливаете Xorg в `/usr`, **пропустите** оставшуюся часть раздела.
@@ -142,6 +144,46 @@ exit
 ```bash
 ln -sv $XORG_PREFIX/lib/X11 /usr/lib/X11
 ln -sv $XORG_PREFIX/include/X11 /usr/include/X11
+```
+
+## Для multilib
+
+### Сборка и установка
+
+```bash
+bash -e
+export CC="gcc -m32" CXX="g++ -m32"
+for package in $(grep -v '^#' ../lib-7.md5 | awk '{print $2}')
+do
+  packagedir=${package%.tar.bz2}
+  tar -xf $package
+  pushd $packagedir
+  docdir="--docdir=$XORG_PREFIX/share/doc/$packagedir"
+  case $packagedir in
+    libICE* )
+      ./configure $XORG_CONFIG $docdir ICE_LIBS=-lpthread --libdir=$XORG_PREFIX/lib32 --host=i686-pc-linux-gnu
+    ;;
+
+    libXfont2-[0-9]* )
+      ./configure $XORG_CONFIG $docdir --disable-devel-docs --libdir=$XORG_PREFIX/lib32 --host=i686-pc-linux-gnu
+    ;;
+
+    libXt-[0-9]* )
+      ./configure $XORG_CONFIG $docdir \
+                  --with-appdefaultdir=/etc/X11/app-defaults --libdir=$XORG_PREFIX/lib32 --host=i686-pc-linux-gnu
+    ;;
+
+    * )
+      ./configure $XORG_CONFIG $docdir --libdir=$XORG_PREFIX/lib32 --host=i686-pc-linux-gnu
+    ;;
+  esac
+  make
+  make DESTDIR=$PWD/DESTDIR install
+  as_root cp -Rv DESTDIR/$XORG_PREFIX/lib32/* $XORG_PREFIX/lib32
+  popd
+  rm -rf $packagedir
+  as_root ldconfig
+done
 ```
 
 ## Установленные файлы

@@ -27,18 +27,18 @@
 ## Настройка
 
 ```bash
-CFLAGS="${CFLAGS:--O2 -g} -Wno-error=format-extra-args" ./configure $XORG_CONFIG \
-            --without-doxygen \
-            --docdir='${datadir}'/doc/libxcb-1.14
+CFLAGS="${CFLAGS:--O3 -s} -Wno-error=format-extra-args" ./configure $XORG_CONFIG \
+            --without-doxygen 
 ```
 
-## Компиляция
+## Сборка
 
 ```bash
 make
 ```
 
 ## Тестирование
+
 ```bash
 make check
 ```
@@ -47,6 +47,39 @@ make check
 ```bash
 make install
 ```
+
+## Для multilib
+
+### Очистка
+
+```bash
+make distclean
+```
+
+### Настройка
+
+```bash
+CC="gcc -m32" CXX="g++ -m32" CFLAGS="${CFLAGS:--O3 -s} -Wno-error=format-extra-args" \
+./configure                      \
+     $XORG_CONFIG                 \
+    --libdir=$XORG_PREFIX/lib32   \
+    --host=i686-pc-linux-gnu --without-doxygen
+```
+
+### Сборка 
+
+```bash
+make
+```
+
+### Установка
+
+```bash
+make DESTDIR=$PWD/DESTDIR install
+cp -Rv DESTDIR/$XORG_PREFIX/lib32/* $XORG_PREFIX/lib32
+rm -rf DESTDIR
+```
+
 
 ## Установленные файлы
 * **Установленные программы:** нет

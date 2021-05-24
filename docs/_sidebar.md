@@ -41,6 +41,8 @@
       - [libXau](x/xorg/libxau)
       - [libXdmcp](x/xorg/libxdmcp)
       - [xcb-proto](x/xorg/xcb-proto)
+      - [libxcb](x/xorg/libxcb.md)
+      - [Библиотеки Xorg](x/xorg/xorg_libs.md)
   - **Графические библиотеки**
   - **Темы иконок**
   - **Дисплейные менеджеры**
