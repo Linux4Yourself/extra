@@ -152,7 +152,8 @@ ln -sv $XORG_PREFIX/include/X11 /usr/include/X11
 
 ```bash
 bash -e
-CC="gcc -m32" CXX="g++ -m32" for package in $(grep -v '^#' ../lib-7.md5 | awk '{print $2}')
+export CC="gcc -m32" CXX="g++ -m32"
+for package in $(grep -v '^#' ../lib-7.md5 | awk '{print $2}')
 do
   packagedir=${package%.tar.bz2}
   tar -xf $package
