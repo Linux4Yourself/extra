@@ -22,24 +22,26 @@
 
 ## Настройка
 В документации к этому пакету рекомендуют собирать программу в отдельном каталоге `build`:
+
 ```bash
 mkdir build && cd build
 ```
 
 Теперь подготовьте пакет `xorgproto` к компиляции:
+
 ```
 meson --prefix=$XORG_PREFIX -Dlegacy=true ..
 ```
 
 ## Компиляция
+
 ```bash
 ninja
 ```
 
-## Тестирование
-> Этот пакет не имеет тестов
 
 ## Установка
+
 ```
 ninja install &&
 
@@ -48,6 +50,7 @@ install -vm 644 ../[^m]*.txt ../PM_spec $XORG_PREFIX/share/doc/xorgproto-2020.1
 ```
 
 ### Объяснение новых команд и значений
+
 * `install -vm 644 ../[^m]*.txt ../PM_spec $XORG_PREFIX/share/doc/xorgproto-2020.1` - не устанавливать текстовые файлы в `/usr/share/doc`. Часть `[^m]` предотвращает копирование `meson_options.txt`
 
 ## Установленные файлы
