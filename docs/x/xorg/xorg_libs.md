@@ -22,7 +22,7 @@
 * [libxcb](x/xorg/libxcb)
 
 ### Рекомендуемые
-* elogind
+* elogind (для `SysVInit`)
 
 ## Подготовка
 
