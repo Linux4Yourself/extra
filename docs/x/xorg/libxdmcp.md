@@ -16,10 +16,6 @@
   })
 </script>
 
-## Зависимости
-### Необходимые
-* [xorgproto](x/xorg/xorgproto.md)
-
 ## Настройка
 
 ```bash
