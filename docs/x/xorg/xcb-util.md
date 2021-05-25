@@ -28,8 +28,7 @@
 ```bash
 ./configure $XORG_CONFIG
 ```
-
-## Компиляция
+## Сборка
 
 ```bash
 make
