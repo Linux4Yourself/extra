@@ -16,14 +16,6 @@
   })
 </script>
 
-## Зависимости
-### Необходимые
-* [libXau](x/xorg/libxau.md)
-* [xcb-proto](x/xorg/xcb-proto.md)
-
-### Рекомендуемые
-* [libXdmcp](x/xorg/libxdmcp.md)
-
 ## Настройка
 
 ```bash
