@@ -49,7 +49,7 @@ book = {
 }
 
 // источник метаданных пакетов.
-const pkgsUrlBase = `https://raw.githubusercontent.com/Linux4Yourself/Linux4Yourself.Book.Packages/${book.revision}/src/packages/core`;
+const pkgsUrlBase = `https://raw.githubusercontent.com/Linux4Yourself/Linux4Yourself.Book.Packages/${book.revision}/src/packages/extra`;
 const pkgsSrc =  `${pkgsUrlBase}/packages.json`;
 
 // Получить список всех пакетов из источника.
