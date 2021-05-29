@@ -21,7 +21,7 @@
 Если вы скачали патч `xdemos` (необходим при тестировании установки Xorg), примените его:
 
 ```bash
-patch -Np1 -i ../mesa-20.3.4-add_xdemos-1.patch
+patch -Np1 -i ../mesa-21.1.1-add_xdemos-1.patch
 ```
 
 Отредактируйте скрипт из тестов для использования Python 3 вместо устаревшего Python 2:
@@ -105,8 +105,8 @@ ninja test
 ```bash
 ninja install
 
-install -v -dm755 /usr/share/doc/mesa-20.3.4
-cp -rfv ../docs/* /usr/share/doc/mesa-20.3.4
+install -v -dm755 /usr/share/doc/mesa-21.1.1 &&
+cp -rfv ../docs/* /usr/share/doc/mesa-21.1.1
 ```
 
 ## Объяснение новых команд
