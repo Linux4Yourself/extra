@@ -78,7 +78,6 @@ meson --prefix=$XORG_PREFIX          \
       -Dgallium-drivers=$GALLIUM_DRV \
       -Dgallium-nine=false           \
       -Dglx=dri                      \
-      -Dosmesa=gallium               \
       -Dvalgrind=disabled            \
       -Dlibunwind=disabled           \
       ..
