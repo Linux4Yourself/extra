@@ -12,6 +12,7 @@
   
 - **Общие библиотеки**
   - [ICU](libs/icu.md)
+  - [Sqlite](libs/sqlite.md)
   - **XML**
   - **SGML**
   
