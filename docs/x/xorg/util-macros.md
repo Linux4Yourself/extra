@@ -1,34 +1,14 @@
-<package-info :package="package" showsbu2></package-info>
-
-<script>
-		new Vue({
-		el: '#main',
-		data: { package: {} },
-		mounted: function () {
-				this.getPackage('util-macros');
-		},
-		methods: {
-			getPackage: function(name) {
-					getPackage(name)
-					.then(response => this.package = response);
-			},
-		}
-  })
-</script>
+<pkg :name="'util-macros'" instsize showsbu2></pkg>
 
 ## Настройка
-
-```bash
-./configure $XORG_CONFIG
-```
+<package-script :package="'util-macros'" :type="'configure'"></package-script>
 
 ## Установка
-
-```
-make install
-```
-
+<package-script :package="'util-macros'" :type="'install'"></package-script>
+ 
 ## Установленные файлы
-* **Программы:** нет
-* **Библиотеки:** нет
-* **Установленные директории:** `$XORG_PREFIX/share/pkgconfig` и `$XORG_PREFIX/share/util-macros`
+<package-script :package="'util-macros'" :type="'files'"></package-script>
+
+<script>
+	new Vue({ el: '#main' })
+</script> 
