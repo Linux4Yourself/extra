@@ -1,59 +1,25 @@
-<package-info :package="package" showsbu2></package-info>
-
-<script>
-		new Vue({
-		el: '#main',
-		data: { package: {} },
-		mounted: function () {
-				this.getPackage('xorgproto');
-		},
-		methods: {
-			getPackage: function(name) {
-					getPackage(name)
-					.then(response => this.package = response);
-			},
-		}
-  })
-</script>
-
-## Зависимости
-### Необходимые
-* [util-macros](x/xorg/util-macros.md)
+<pkg :name="'xorgproto'" instsize showsbu2></pkg>
 
 ## Настройка
-В документации к этому пакету рекомендуют собирать программу в отдельном каталоге `build`:
+<package-script :package="'xorgproto'" :type="'configure'"></package-script>
 
-```bash
-mkdir build && cd build
-```
+### Объяснение параметров configure
 
-Теперь подготовьте пакет `xorgproto` к компиляции:
+``-Dlegacy=true`` Необходимо для некоторых очень старых программ
 
-```
-meson --prefix=$XORG_PREFIX -Dlegacy=true ..
-```
-
-## Компиляция
-
-```bash
-ninja
-```
-
+## Сборка
+<package-script :package="'xorgproto'" :type="'build'"></package-script>
 
 ## Установка
-
-```
-ninja install &&
-
-install -vdm 755 $XORG_PREFIX/share/doc/xorgproto-2020.1 &&
-install -vm 644 ../[^m]*.txt ../PM_spec $XORG_PREFIX/share/doc/xorgproto-2020.1
-```
+<package-script :package="'xorgproto'" :type="'install'"></package-script>
+ 
+## Установленные файлы
+<package-script :package="'xorgproto'" :type="'files'"></package-script>
 
 ### Объяснение новых команд и значений
 
-* `install -vm 644 ../[^m]*.txt ../PM_spec $XORG_PREFIX/share/doc/xorgproto-2020.1` - не устанавливать текстовые файлы в `/usr/share/doc`. Часть `[^m]` предотвращает копирование `meson_options.txt`
+* `install -vm 644 ../[^m]*.txt ../PM_spec $XORG_PREFIX/share/doc/xorgproto-2020.1` - Устанавливает документацию. Часть `[^m]` предотвращает копирование `meson_options.txt`
 
-## Установленные файлы
-* **Установленные программы:** нет
-* **Установленные библиотеки:** нет
-* **Установленные директории:** `$XORG_PREFIX/include/GL`, `$XORG_PREFIX/include/X11`, и `$XORG_PREFIX/share/doc/xorgproto-2020.1`
+<script>
+	new Vue({ el: '#main' })
+</script> 
