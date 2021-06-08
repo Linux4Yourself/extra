@@ -191,6 +191,8 @@ do
   rm -rf $packagedir
   as_root ldconfig
 done
+unset CC CXX
+exit
 ```
 
 ## Установленные файлы
