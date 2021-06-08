@@ -20,7 +20,7 @@
 			- multi_install - установка multilib
  -->
 
-<pkg :name="'mpc'" instsize showsbu2></pkg>
+<pkg :name="'mpc'" instsize showsbu></pkg>
 ## Подготовка
 <package-script :package="'mpc'" :type="'prepare'"></package-script>
 ## Настройка
