@@ -15,6 +15,7 @@
   - [ICU](libs/icu.md)
   - [Sqlite](libs/sqlite.md)
   - **XML**
+  - [Libxml2](libs/xml/libxml.md)
   - **SGML**
   
 - **Разработка**
