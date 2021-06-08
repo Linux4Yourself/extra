@@ -148,10 +148,17 @@ ln -sv $XORG_PREFIX/include/X11 /usr/include/X11
 
 ## Для multilib
 
-### Сборка и установка
+### Подготовка
+
+Запустите под оболочку:
 
 ```bash
 bash -e
+```
+
+### Сборка и установка
+
+```bash
 export CC="gcc -m32" CXX="g++ -m32"
 for package in $(grep -v '^#' ../lib-7.md5 | awk '{print $2}')
 do
