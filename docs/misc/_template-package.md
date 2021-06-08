@@ -1,6 +1,6 @@
 <!-- 
 	Этот шаблон  можно использовавть для инструкции по сборке пакета.
-	<pkg :name="'mpc'" instsize showsbu2></pkg> - шапка с описанием пакета.
+	<pkg :name="'mpc'" instsize showsbu></pkg> - шапка с описанием пакета.
 		параметры: name - название пакета из файла packages.json репозитория с пакетами. https://github.com/Linux4Yourself/Linux4Yourself.Book.Packages
 
 	<package-script :package="'mpc'" :type="'prepare'"></package-script> - выводит инструкцию по использованию пакета.
