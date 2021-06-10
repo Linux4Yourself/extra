@@ -41,23 +41,11 @@ Kernel hacking --->
 
 Подготовьте пакет к компиляции, выполнив:
 
-```bash
-SAVEPATH=$PATH                  &&
-PATH=$PATH:/sbin:/usr/sbin      &&
-./configure --prefix=/usr       \
-            --exec-prefix=      \
-            --enable-cmdlib     \
-            --enable-pkgconfig  \
-            --enable-udev_sync
-```
+ <package-script :package="'lvm2'" :type="'prepare'"></package-script>
 
 ## Сборка
 
-```bash
-make
-
-PATH=$SAVEPATH && unset SAVEPATH
-```
+<package-script :package="'lvm2'" :type="'build'"></package-script>
 
 ## Установка минимального набора утилит
 
@@ -71,9 +59,7 @@ make -C libdm install
 
 ## Тестирование
 
-```bash
-make S=shell/thin-flags.sh check_local
-```
+<package-script :package="'lvm2'" :type="'test'"></package-script>
 
 ?> Опция `S=...` позволяет пропускать тесты. Известно, что тест `slell/thin-flags.sh` приводит к зависанию ПК. Время тестирования зависит от скорости диска и кол-ва включенных опций ядра.
 
@@ -108,9 +94,7 @@ dmesg -D
 
 ## Установка
 
-```bash
-make install
-```
+<package-script :package="'lvm2'" :type="'install'"></package-script>
 
 ## Объяснение новых команд
 
