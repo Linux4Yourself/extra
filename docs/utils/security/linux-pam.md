@@ -19,7 +19,7 @@
  
 ## Настройка
 
-Создайте несколько общих файлов:
+Создайте несколько общих файлов и ограничивающий файл ``/etc/pam.d/other``:
 <package-script :package="'linux-pam'" :type="'postinstall'"></package-script>
 
 Информацию о расширенной настройки PAM можно найти на его официальном сайте - http://www.linux-pam.org/Linux-PAM-html/Linux-PAM_SAG.html
