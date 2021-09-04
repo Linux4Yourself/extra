@@ -5,7 +5,7 @@
  */
 window.$docsify = {
 	name: 'Linux для себя',
-	repo: 'https://github.com/Linux4Yourself/Linux4Yourself.Book',
+	repo: 'https://github.com/Linux4Yourself/extra',
 	coverpage: false,
 	loadSidebar: true,
 	maxLevel: 2,
@@ -50,7 +50,7 @@ book = {
 }
 
 // источник метаданных пакетов.
-const pkgsUrlBase = `https://raw.githubusercontent.com/Linux4Yourself/Linux4Yourself.Book.Packages/${book.revision}/src/packages/extra`;
+const pkgsUrlBase = `packages`;
 const pkgsSrc = `${pkgsUrlBase}/packages.json`;
 
 // Получить список всех пакетов из источника.

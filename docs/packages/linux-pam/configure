@@ -1,0 +1,4 @@
+./configure --prefix=/usr                        \
+            --sysconfdir=/etc                     \
+            --libdir=/usr/lib                      \
+            --enable-securedir=/usr/lib/security  
