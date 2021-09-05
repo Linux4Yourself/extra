@@ -1,0 +1,234 @@
+[
+	{
+		"name": "mc",
+		"fileName": "mc-4.8.26.tar.xz",
+		"description": "Один из файловых менеджеров с текстовым интерфейсом типа Norton Commander для UNIX-подобных операционных систем, а также Microsoft Windows и Windows NT, OS/2, macOS.",
+		"url": "http://ftp.midnight-commander.org/mc-4.8.26.tar.xz",
+		"homeUrl": "https://midnight-commander.org/",
+		"version": "4.8.26",
+		"releasesUrl": "https://download.savannah.gnu.org/releases/acl/",
+		"md5": "3c1f77b71dba1f4eeeedc4276627fed7",
+		"size": "2.38",
+		"installedSize": 0,
+		"sbu": 0,
+		"dependencies": {
+			"required": [
+				"glib",
+				"pcre"
+			],
+			"recomended": [
+				"slang"
+			],
+			"optional": [
+				"doxygen",
+				"gpm",
+				"libssh2",
+				"ruby",
+				"samba",
+				"unzip",
+				"xwindowsystem",
+				"zip"
+			]
+		},
+		"scripts": [
+			".name",
+			".scripts",
+			".url",
+			".version",
+			"build",
+			"configure",
+			"install"
+		],
+		"multilibSupport": false
+	},
+	{
+		"name": "sqlite",
+		"fileName": "sqlite-autoconf-3350500.tar.gz",
+		"description": "Пакет SQlite предостовляет библиотеку реализующею базу данных SQL",
+		"url": "https://sqlite.org/2021/sqlite-autoconf-3350500.tar.gz",
+		"homeUrl": "https://sqlite.org",
+		"version": "3.35.5",
+		"releasesUrl": "https://sqlite.org/download.html",
+		"md5": "d1d1aba394c8e0443077dc9f1a681bb8",
+		"size": "2.82",
+		"installedSize": 3.6,
+		"sbu": 1.8,
+		"dependencies": {
+			"optional": [
+				"doxygen",
+				"llvm"
+			]
+		},
+		"scripts": [
+			".name",
+			".scripts",
+			".url",
+			".version",
+			"build",
+			"configure",
+			"install",
+			"multi_build",
+			"multi_configure",
+			"multi_install",
+			"multi_prepare"
+		],
+		"multilibSupport": true
+	},
+	{
+		"name": "libxml2",
+		"fileName": "libxml2-2.9.12.tar.gz",
+		"description": "Пакет Libxml2 предоставляет библиотеку для работы с XML.",
+		"url": "http://xmlsoft.org/sources/libxml2-2.9.12.tar.gz",
+		"homeUrl": "http://xmlsoft.org",
+		"version": "2.9.12",
+		"releasesUrl": "http://xmlsoft.org/sources/",
+		"md5": "f433a39be087a9f0b197eb2307ad9f75",
+		"size": "5.42",
+		"installedSize": 3.2,
+		"sbu": 0.4,
+		"dependencies": {
+			"optional": [
+				"icu"
+			]
+		},
+		"scripts": [
+			".name",
+			".scripts",
+			".url",
+			".version",
+			"build",
+			"configure",
+			"install",
+			"multi_build",
+			"multi_configure",
+			"multi_install",
+			"multi_prepare"
+		],
+		"multilibSupport": true
+	},
+	{
+		"name": "linux-pam",
+		"fileName": "Linux-PAM-1.5.1.tar.xz",
+		"description": "Пакет Linux-PAM содержит подключаемые модули аутентификации, позволяющие локальному системному администратору выбирать способ аутентификации пользователей приложениями.",
+		"url": "https://github.com/linux-pam/linux-pam/releases/download/v1.5.1/Linux-PAM-1.5.1.tar.xz",
+		"homeUrl": "https://github.com/linux-pam/linux-pam/",
+		"version": "1.5.1",
+		"releasesUrl": "https://github.com/linux-pam/linux-pam/releases/",
+		"md5": "155f2a31d07077b2c63a1f135876c31b",
+		"size": "0.93",
+		"installedSize": 1.5,
+		"sbu": 0.1,
+		"dependencies": {
+			"optional": [
+				"db",
+				"libnsl",
+				"libtirpc",
+				"libaudit",
+				"prelude",
+				"docbook-xml",
+				"docbook-xsl",
+				"fop",
+				"libxslt",
+				"linx"
+			]
+		},
+		"scripts": [
+			".name",
+			".scripts",
+			".url",
+			".version",
+			"build",
+			"configure",
+			"install",
+			"postinstall",
+			"prepare"
+		],
+		"multilibSupport": false
+	},
+	{
+		"name": "util-macros",
+		"fileName": "util-macros-1.19.3.tar.bz2",
+		"description": "Пакет Util-macros предостовляет макросы m4 для всех компонентов Xorg",
+		"url": "https://www.x.org/pub/individual/util/util-macros-1.19.3.tar.bz2",
+		"homeUrl": "https://www.x.org",
+		"version": "1.19.3",
+		"releasesUrl": "https://www.x.org/pub/individual/util/",
+		"md5": "4be6df7e6af52e28e13dc533244eb9d7",
+		"size": "0.08",
+		"installedSize": 0,
+		"sbu": 0,
+		"dependencies": {
+			"reqired": [
+				"xorg-env"
+			]
+		},
+		"scripts": [
+			".name",
+			".scripts",
+			".url",
+			".version",
+			"configure",
+			"install"
+		],
+		"multilibSupport": false
+	},
+	{
+		"name": "xorgproto",
+		"fileName": "xorgproto-2021.4.tar.bz2",
+		"description": "Пакет xorgproto предоставляет используемые Xorg заголовочные файлы",
+		"url": "https://xorg.freedesktop.org/archive/individual/proto/xorgproto-2021.4.tar.bz2",
+		"homeUrl": "https://xorg.freedesktop.org/",
+		"version": "2021.4",
+		"releasesUrl": "https://xorg.freedesktop.org/archive/individual/proto/",
+		"md5": "fb7593911f90727adc03d731e286c685",
+		"size": "0.84",
+		"installedSize": 0,
+		"sbu": 0,
+		"dependencies": {
+			"reqired": [
+				"util-macros"
+			],
+			"optional": [
+				"fop",
+				"libxslt",
+				"xmlto",
+				"asciidoc"
+			]
+		},
+		"scripts": [
+			".name",
+			".scripts",
+			".url",
+			".version",
+			"build",
+			"configure",
+			"install"
+		],
+		"multilibSupport": false
+	},
+	{
+		"name": "icu",
+		"fileName": "icu4c-69_1-src.tgz",
+		"description": "ICU предоставляет библиотеки для работы с Unicode",
+		"url": " https://github.com/unicode-org/icu/releases/download/release-69-1/icu4c-69_1-src.tgz",
+		"homeUrl": "https://github.com/unicode-org/icu/",
+		"version": "69.1",
+		"releasesUrl": " https://github.com/unicode-org/icu/releases/",
+		"md5": "9403db682507369d0f60a25ea67014c4",
+		"size": "23.67",
+		"installedSize": 0,
+		"sbu": 0,
+		"dependencies": {
+			"optional": [
+				"doxygen",
+				"llvm"
+			]
+		},
+		"multilibSupport": false,
+		"scripts": [
+			".name",
+			".url",
+			".version"
+		]
+	}
+]

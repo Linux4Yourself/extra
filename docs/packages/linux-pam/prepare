@@ -1,0 +1,3 @@
+sed -e 's/dummy elinks/dummy lynx/'                                    \
+    -e 's/-no-numbering -no-references/-force-html -nonumbers -stdin/' \
+    -i configure
