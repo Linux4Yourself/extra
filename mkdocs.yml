@@ -1,0 +1,113 @@
+site_name: Linux для себя - Extra
+site_author: Linux4Yourself community
+site_description: 'Подробное руководство по созданию собственной Linux-системы из исходного кода'
+site_url: https://lx4u.ru/extra/# # Изменить адрес сайта
+
+repo_name: extra
+repo_url: https://github.com/Linux4Yourself/extra
+edit_uri: edit/develop/docs/
+
+theme:
+  name: 'material'
+  logo: https://raw.githubusercontent.com/Linux4Yourself/design/main/logo/logo.svg
+  favicon: https://raw.githubusercontent.com/Linux4Yourself/design/main/favicon/favicon.ico
+  language: ru
+  include_sidebar: true
+  features:
+    - content.code.annotate
+    - content.tabs.link
+    - navigation.expand
+    - navigation.indexes
+    - search.highlight
+    - search.share
+    - search.suggest
+    - navigation.top
+  palette:
+    - scheme: default
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/eye-outline
+        name: Переключиться в тёмный режим
+    - scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/eye
+        name: Переключиться в светлый режим
+  font:
+    text: 'Open Sans'
+    code: 'Droid Sans Mono'
+
+extra:
+  social:
+    - icon: 'fontawesome/brands/github'
+      link: 'https://github.com/Linux4Yourself/book'
+    - icon: 'fontawesome/brands/telegram'
+      link: 'https://t.me/Linux4Yourself'
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - def_list
+  - md_in_html
+  - codehilite
+  - meta
+  - attr_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: ⚓︎
+  - markdown.extensions.tables
+  - pymdownx.arithmatex
+  - pymdownx.betterem
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.magiclink:
+      repo_url_shortener: true
+      repo_url_shorthand: true
+      provider: "github"
+      user: "facelessuser"
+      repo: "pymdown-extensions"
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.smartsymbols
+  - pymdownx.tasklist
+  - pymdownx.highlight:
+      linenums: true
+      linenums_style: pymdownx-inline
+
+plugins:
+  # Раскомментировать в случае необходимости генерации
+  # PDF-версии руководства.
+  #- with-pdf
+  - search:
+      lang: ru
+
+  - include:
+        src_path: docs/packages
+nav:
+    - Linux для себя - Extra: index.md
+    - Предисловие: prologue/forevord.md
+    - Программы:
+        - Безопасность:
+            - Linux-PAM: utils/security/linux-pam.md
+        - Консольные утилиты: util/general/shell/dialog.md
+    - Общие библиотеки:
+        - ICU: libs/icu.md
+        - SQLite: libs/sqlite.md
+        - LibXML2: libs/xml/libxml.md
+    - X Window System:
+        - Введение: x/xorg/intro.md
+        - Система сборки Xorg: x/xorg/xorg_build_system.md
+        - util-macros: x/xorg/util-macros.md
+        - xorgproto: x/xorg/xorgproto.md
+        - libXau: x/xorg/libxau.md
+        - libXdmcp: x/xorg/libxdmcp.md
+        - xcb-proto: x/xorg/xcb-proto.md
+        - libxcb: x/xorg/libxcb.md
+        - Библиотеки Xorg: x/xorg/xorg_libs.md
